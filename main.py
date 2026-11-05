@@ -1,38 +1,48 @@
-# 1. Input nilai tugas, UTS, UAS, dan kehadiran mahasiswa
-nilai_tugas = float(input("Masukkan nilai Tugas: "))
-nilai_uts = float(input("Masukkan nilai UTS: "))
-nilai_uas = float(input("Masukkan nilai UAS: "))
-kehadiran = float(
-    input("Masukkan persentase Kehadiran (contoh 85 untuk 85%): ")
-)
+#masukkan jumlah mahasiswa
+a = int(input('masukkan jumlah :'))
+#input nilai
+total_nilai = 0
+#format
 
-# 2. Hitung Nilai Akhir
-nilai_akhir = (
-    (0.20 * nilai_tugas) + (0.30 * nilai_uts) + (0.50 * nilai_uas)
-)
+for n in range(a):
+    nilai = float(input(f'Nilai mahasiswa ke-{n+1} :'))
+    total_nilai += nilai
 
-print("-" * 40)
-print(f"Nilai Akhir: {nilai_akhir}")
-print(f"Kehadiran  :{kehadiran}%")
-print("-" * 40)
+#hitung rata rata
 
-# Cek apakah nilai akhir genap (menggunakan modulus %)
-is_genap = (nilai_akhir % 2) == 0
+b= total_nilai / a 
 
-# Evaluasi Status Kelulusan
-# 4. Status LULUS DENGAN PREDIKAT
-if nilai_akhir >= 85 and kehadiran >= 90 and is_genap:
-    status = "LULUS DENGAN PREDIKAT"
+print(f"rata-rata Nilai : {b}")
 
-# 3 & 6. Status LULUS (tanpa predikat)
-elif nilai_akhir >= 75 and kehadiran >= 80:
-    status = "LULUS"
+#cek Kelulusan 
 
-# 5. Status BELUM LULUS
+if b >= 90 :
+    print('lulus')
+
 else:
-    status = "BELUM LULUS"
+    print('tidak lulus')
 
-# Tampilkan Status
-print(f"Status Mahasiswa: {status}")
+#masukkan jumlah mahasiswa
+a = int(input('masukkan jumlah :'))
+#input nilai
+total_nilai = 0
+#format
 
+for n in range(a):
+    nilai = float(input(f'Nilai mahasiswa ke-{n+1} :'))
+    total_nilai += nilai
+
+#hitung rata rata
+
+b= total_nilai / a 
+
+print(f"rata-rata Nilai : {b}")
+
+#cek Kelulusan 
+
+if b >= 90 :
+    print('lulus')
+
+else:
+    print('tidak lulus')
 
